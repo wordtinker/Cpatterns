@@ -135,7 +135,8 @@ namespace BridgeExample
             Accelerate();
             Accelerate();
         }
-    }
+    }
+
     class Program
     {
         // The Bridge pattern addresses this requirement by separating the 'abstraction' from the

@@ -77,7 +77,8 @@ namespace FactoryMethodExample
                 return new BoxVan();
             }
         }
-    }
+    }
+
     /* Vehicles */
     public interface IVehicle
     {
@@ -113,13 +114,15 @@ namespace FactoryMethodExample
     {
         Unpainted, Blue, Black, Green,
         Red, Silver, White, Yellow
-    }
+    }
+
 
 
     class Program
     {
         // Define an interface for creating an object, but let subclasses decide which class to
-        // instantiate.        static void Main(string[] args)
+        // instantiate.
+        static void Main(string[] args)
         {
             // Client code
             // I want an economical car, coloured blue...
