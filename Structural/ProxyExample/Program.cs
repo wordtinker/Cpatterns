@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -129,7 +126,8 @@ namespace ProxyExample
     /// <summary>
     /// Some methods can be time-consuming, such as those that load complex graphical components or need
     /// network connections.In these instances, the Proxy pattern provides a 'stand-in' object until such time
-    /// that the time-consuming resource is complete, allowing the rest of your application to load.    /// </summary>
+    /// that the time-consuming resource is complete, allowing the rest of your application to load.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

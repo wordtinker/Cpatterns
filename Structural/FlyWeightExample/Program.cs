@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace FlyWeightExample
 {
@@ -19,7 +16,8 @@ namespace FlyWeightExample
         void DecreasePower();
 
         // Methods having extrinsic (i.e. unshared) state
-        void Diagnose(IDiagnosticTool tool);
+        void Diagnose(IDiagnosticTool tool);
+
     }
     public abstract class AbstractEngine : IEngine
     {
@@ -81,7 +79,8 @@ namespace FlyWeightExample
         public virtual void Diagnose(IDiagnosticTool tool)
         {
             tool.RunDiagnosis(this);
-        }
+        }
+
     }
     class StandardEngine : AbstractEngine
     {
@@ -151,7 +150,8 @@ namespace FlyWeightExample
     public interface IDiagnosticTool
     {
         void RunDiagnosis(object obj);
-    }
+    }
+
     public class EngineDiagnosticTool : IDiagnosticTool
     {
         public virtual void RunDiagnosis(object obj)
@@ -193,7 +193,8 @@ namespace FlyWeightExample
             }
             return e;
         }
-    }
+    }
+
 
     /// <summary>
     /// The Flyweight pattern allows you to reference a multitude of objects of the same type and having the
@@ -225,7 +226,8 @@ namespace FlyWeightExample
             Console.WriteLine(standard2.GetHashCode());
             Console.WriteLine(standard3.GetHashCode());
             Console.WriteLine(standard4.GetHashCode());
-            Console.WriteLine(standard5.GetHashCode());
+            Console.WriteLine(standard5.GetHashCode());
+
         }
     }
 }

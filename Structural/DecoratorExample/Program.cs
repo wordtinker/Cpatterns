@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DecoratorExample
 {
@@ -191,7 +187,8 @@ namespace DecoratorExample
     /// <summary>
     /// The Decorator pattern is a good example of preferring object composition over inheritance. Had we
     /// attempted to use inheritance for the various vehicle options we would have needed to create many
-    /// different combinations of subclasses to model each combination of selectable options.    /// </summary>
+    /// different combinations of subclasses to model each combination of selectable options.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

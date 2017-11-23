@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FacadeExample
 {
@@ -94,7 +90,8 @@ namespace FacadeExample
         void CleanInterior();
         void CleanExteriorBody();
         void PolishWindows();
-        void TakeForTestDrive();
+        void TakeForTestDrive();
+
     }
     public abstract class AbstractVehicle : IVehicle
     {
@@ -133,7 +130,8 @@ namespace FacadeExample
         public virtual void TakeForTestDrive()
         {
             Console.WriteLine("Taking for test drive...");
-        }
+        }
+
     }
     public class Saloon : AbstractVehicle
     {
@@ -203,7 +201,8 @@ namespace FacadeExample
 
     /// <summary>
     /// Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higherlevel
-    /// interface that makes the subsystem easier to use.    /// </summary>
+    /// interface that makes the subsystem easier to use.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
