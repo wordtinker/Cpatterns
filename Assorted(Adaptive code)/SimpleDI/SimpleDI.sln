@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDI", "SimpleDI\SimpleDI.csproj", "{B2C45BF9-B94C-4ED9-BB85-0BEBC45828BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2C45BF9-B94C-4ED9-BB85-0BEBC45828BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2C45BF9-B94C-4ED9-BB85-0BEBC45828BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2C45BF9-B94C-4ED9-BB85-0BEBC45828BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2C45BF9-B94C-4ED9-BB85-0BEBC45828BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F788C85B-C042-4FC6-A00C-26386A7D4C77}
+	EndGlobalSection
+EndGlobal
