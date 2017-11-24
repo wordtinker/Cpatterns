@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MementoExample
 {
@@ -47,14 +43,17 @@ namespace MementoExample
             speedometer.CurrentSpeed = copyOfCurrentSpeed;
             speedometer.previousSpeed = copyOfPreviousSpeed;
         }
-    }
+    }
+
 
     class Program
     {
         static void Main(string[] args)
         {
-            Speedometer speedo = new Speedometer();
-            speedo.CurrentSpeed = 50;
+            Speedometer speedo = new Speedometer
+            {
+                CurrentSpeed = 50
+            };
             speedo.CurrentSpeed = 100;
             Console.WriteLine("Current speed: " + speedo.CurrentSpeed);
             Console.WriteLine("Previous speed: " + speedo.previousSpeed);

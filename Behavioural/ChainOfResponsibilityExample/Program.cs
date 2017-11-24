@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChainOfResponsibilityExample
 {
@@ -45,9 +41,12 @@ namespace ChainOfResponsibilityExample
             {
                 // Unable to handle here so forward to next in chain
                 NextHandler.ProcessHandler(email);
-            }        }
+            }
+        }
         protected internal abstract string[] MatchingWords();
-        protected internal abstract void HandleHere(string email);        public static void Handle(string email)
+        protected internal abstract void HandleHere(string email);
+
+        public static void Handle(string email)
         {
             // Create the handler objects...
             IEmailHandler spam = new SpamEmailHandler();
@@ -61,8 +60,10 @@ namespace ChainOfResponsibilityExample
             service.NextHandler = manager;
             manager.NextHandler = general;
             // Start the ball rolling...
-            spam.ProcessHandler(email);
-        }    }
+            spam.ProcessHandler(email);
+
+        }
+    }
 
     public class SpamEmailHandler : AbstractEmailHandler
     {
@@ -118,7 +119,8 @@ namespace ChainOfResponsibilityExample
         {
             Console.WriteLine("Email handled by general enquires.");
         }
-    }
+    }
+
     class Program
     {
         static void Main(string[] args)

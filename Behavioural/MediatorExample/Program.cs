@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MediatorExample
 {
@@ -30,7 +26,8 @@ namespace MediatorExample
             Console.WriteLine("Ignition turned off");
         }
         public virtual bool On { get; private set; }
-    }
+    }
+
     public class Gearbox
     {
         private EngineManagementSystem mediator;

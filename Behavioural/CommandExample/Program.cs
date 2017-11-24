@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CommandExample
 {
@@ -52,7 +48,8 @@ namespace CommandExample
                 }
             }
         }
-    }
+    }
+
     public class ElectricWindow
     {
         public ElectricWindow()
@@ -84,10 +81,14 @@ namespace CommandExample
                 Console.WriteLine("Window is now closed");
             }
         }
-    }    public interface IVoiceCommand
+    }
+
+    public interface IVoiceCommand
     {
         void Execute();
-    }    public class VolumeUpCommand : IVoiceCommand
+    }
+
+    public class VolumeUpCommand : IVoiceCommand
     {
         private Radio radio;
         public VolumeUpCommand(Radio radio)
@@ -98,7 +99,8 @@ namespace CommandExample
         {
             radio.VolumeUp();
         }
-    }    public class VolumeDownCommand : IVoiceCommand
+    }
+    public class VolumeDownCommand : IVoiceCommand
     {
         private Radio radio;
         public VolumeDownCommand(Radio radio)
@@ -121,7 +123,8 @@ namespace CommandExample
         {
             window.CloseWindow();
         }
-    }    public class WindowDownCommand : IVoiceCommand
+    }
+    public class WindowDownCommand : IVoiceCommand
     {
         private ElectricWindow window;
         public WindowDownCommand(ElectricWindow window)
@@ -132,7 +135,9 @@ namespace CommandExample
         {
             window.OpenWindow();
         }
-    }    public class SpeechRecogniser
+    }
+
+    public class SpeechRecogniser
     {
         private IVoiceCommand upCommand, downCommand;
         public virtual void SetCommands(IVoiceCommand upCommand, IVoiceCommand downCommand)
@@ -148,7 +153,8 @@ namespace CommandExample
         {
             downCommand.Execute();
         }
-    }
+    }
+
     /// <summary>
     /// Commande decouples controller from the object it controls. 
     /// </summary>
@@ -179,6 +185,7 @@ namespace CommandExample
             speechRecogniser.SetCommands(windowUpCommand, windowDownCommand);
             Console.WriteLine("Speech recognition will now control the window");
             speechRecogniser.HearDownSpoken();
-            speechRecogniser.HearUpSpoken();        }
+            speechRecogniser.HearUpSpoken();
+        }
     }
 }
