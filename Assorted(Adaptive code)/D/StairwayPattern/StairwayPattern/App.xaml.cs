@@ -16,6 +16,11 @@ namespace StairwayPattern
         /// The entry point will naturally and necessarily reference everything that
         /// is needed to construct whatever are your resolution roots
         /// (controllers, services, etc.) But this is the only place that has such knowledge.
+        /// Antipatterns exist:
+        /// 1. Service Locator. static class that returns concrete classes. 
+        /// 2. Injecting container intself
+        /// 3. Having default ctor that creates concrete classes along with
+        /// ctor that depends on injected interfaces.
         /// </summary>
         private void OnApplicationStartup(object sender, StartupEventArgs e)
         {
